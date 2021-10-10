@@ -49,13 +49,7 @@ stages:
       inputs:
         kubectlVersion: 'latest'    
     
-    - task: Bash@3
-
-      inputs:
-
-        targetType: 'filepath'
-
-        script: 'sed -i ''s#containerImage#$(ImageName)#g'' loadgenerator.yaml' 
+  
 
 
     - task: Kubernetes@1
